@@ -28,9 +28,6 @@ body {
 
 .background-text {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 120px;
     font-weight: 900;
     color: rgba(255, 255, 0, 0.3);
@@ -46,9 +43,21 @@ body {
     animation: pulse-bg 2s ease-in-out infinite;
 }
 
+.background-text.left {
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+.background-text.right {
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
 @keyframes pulse-bg {
-    0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
-    50% { opacity: 0.9; transform: translate(-50%, -50%) scale(1.02); }
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 0.9; }
 }
 
 .window {
@@ -331,7 +340,8 @@ body {
     </style>
 </head>
 <body>
-    <div class="background-text">ТРУШ ГЕЙМИНГ</div>
+    <div class="background-text left">ТРУШ</div>
+    <div class="background-text right">ГЕЙМИНГ</div>
     <div class="window">
         <div class="title-bar">
             <span class="title-text">Сапёр</span>
